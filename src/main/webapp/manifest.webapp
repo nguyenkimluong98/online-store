@@ -1,6 +1,6 @@
 {
-  "name": "Bookstore",
-  "short_name": "Bookstore",
+  "name": "Online store",
+  "short_name": "Online store",
   "icons": [
     {
       "src": "./content/images/jhipster_family_member_0_head-192.png",

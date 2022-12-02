@@ -5,6 +5,6 @@ import EntitiesMenuItems from 'app/entities/menu';
 
 export const EntitiesMenu = props => (
   <NavDropdown icon="th-list" name="Entities" id="entity-menu" data-cy="entity" style={{ maxHeight: '80vh', overflow: 'auto' }}>
-    <EntitiesMenuItems />
+    <EntitiesMenuItems isAdmin={props.isAdmin} />
   </NavDropdown>
 );
