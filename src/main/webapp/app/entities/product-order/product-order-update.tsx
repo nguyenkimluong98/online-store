@@ -119,16 +119,17 @@ export const ProductOrderUpdate = (props: RouteComponentProps<{ id: string }>) =
                   required: { value: true, message: 'This field is required.' },
                 }}
               />
-              <ValidatedField id="product-order-customer" name="customer" data-cy="customer" label="Customer" type="select">
+              <ValidatedField id="product-order-customer" name="customer" data-cy="customer" label="Customer" type="select" required>
                 <option value="" key="0" />
                 {customers
                   ? customers.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.email}
                       </option>
                     ))
                   : null}
               </ValidatedField>
+              <FormText>This field is required.</FormText>
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/product-order" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

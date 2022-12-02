@@ -60,7 +60,7 @@ export const ProductDetail = (props: RouteComponentProps<{ id: string }>) => {
             ) : null}
           </dd>
           <dt>Product Category</dt>
-          <dd>{productEntity.productCategory ? productEntity.productCategory.id : ''}</dd>
+          <dd>{productEntity.productCategory ? productEntity.productCategory.name : ''}</dd>
         </dl>
         <Button tag={Link} to="/product" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>

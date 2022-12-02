@@ -1,5 +1,6 @@
 {
   "generator-jhipster": {
+    "applicationIndex": 0,
     "applicationType": "monolith",
     "authenticationType": "jwt",
     "baseName": "bookstore",
@@ -21,6 +22,7 @@
     "enableTranslation": false,
     "entities": ["Product", "ProductCategory", "Customer", "ProductOrder", "OrderItem", "Invoice", "Shipment"],
     "entitySuffix": "",
+    "gradleEnterpriseHost": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.8.1",
     "jwtSecretKey": "MGE3MGNiZGQxYzYyZGM3YmI0ZjM5NjZhMDcxYjNjNmU2Y2VmYjMyNzcxNDRlMGRkMjUxZTI2MjNlOGVjZGE4YzBlNjY4ZDJlNzcwNDgwZjBkYTU0NDUzZWM1ZGY3ZGVjZjZlMjg0MDU3MmQxYzJkYWIyZTE1ODJlYTdjZTk5ZmI=",
@@ -29,6 +31,7 @@
     "messageBroker": false,
     "nativeLanguage": "en",
     "otherModules": [],
+    "packageFolder": "com/haui/bookstore",
     "packageName": "com.haui.bookstore",
     "pages": [],
     "prodDatabaseType": "mongodb",

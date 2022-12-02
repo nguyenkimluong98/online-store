@@ -4,17 +4,15 @@ import { Button, Table } from 'reactstrap';
 import { Translate } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT, AUTHORITIES } from 'app/config/constants';
+import { APP_DATE_FORMAT, APP_LOCAL_DATE_FORMAT } from 'app/config/constants';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { IProductCategory } from 'app/shared/model/product-category.model';
 import { getEntities } from './product-category.reducer';
-import { hasAnyAuthority } from 'app/shared/auth/private-route';
 
 export const ProductCategory = (props: RouteComponentProps<{ url: string }>) => {
   const dispatch = useAppDispatch();
 
-  const isAdmin = useAppSelector(state => hasAnyAuthority(state.authentication.account.authorities, [AUTHORITIES.ADMIN]));
   const productCategoryList = useAppSelector(state => state.productCategory.entities);
   const loading = useAppSelector(state => state.productCategory.loading);
 
@@ -36,17 +34,10 @@ export const ProductCategory = (props: RouteComponentProps<{ url: string }>) => 
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} /> Refresh List
           </Button>
-          {isAdmin && (
-            <Link
-              to="/product-category/new"
-              className="btn btn-primary jh-create-entity"
-              id="jh-create-entity"
-              data-cy="entityCreateButton"
-            >
-              <FontAwesomeIcon icon="plus" />
-              &nbsp; Create new Product Category
-            </Link>
-          )}
+          <Link to="/product-category/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
+            <FontAwesomeIcon icon="plus" />
+            &nbsp; Create new Product Category
+          </Link>
         </div>
       </h2>
       <div className="table-responsive">
@@ -81,28 +72,24 @@ export const ProductCategory = (props: RouteComponentProps<{ url: string }>) => 
                       >
                         <FontAwesomeIcon icon="eye" /> <span className="d-none d-md-inline">View</span>
                       </Button>
-                      {isAdmin && (
-                        <>
-                          <Button
-                            tag={Link}
-                            to={`/product-category/${productCategory.id}/edit`}
-                            color="primary"
-                            size="sm"
-                            data-cy="entityEditButton"
-                          >
-                            <FontAwesomeIcon icon="pencil-alt" /> <span className="d-none d-md-inline">Edit</span>
-                          </Button>
-                          <Button
-                            tag={Link}
-                            to={`/product-category/${productCategory.id}/delete`}
-                            color="danger"
-                            size="sm"
-                            data-cy="entityDeleteButton"
-                          >
-                            <FontAwesomeIcon icon="trash" /> <span className="d-none d-md-inline">Delete</span>
-                          </Button>
-                        </>
-                      )}
+                      <Button
+                        tag={Link}
+                        to={`/product-category/${productCategory.id}/edit`}
+                        color="primary"
+                        size="sm"
+                        data-cy="entityEditButton"
+                      >
+                        <FontAwesomeIcon icon="pencil-alt" /> <span className="d-none d-md-inline">Edit</span>
+                      </Button>
+                      <Button
+                        tag={Link}
+                        to={`/product-category/${productCategory.id}/delete`}
+                        color="danger"
+                        size="sm"
+                        data-cy="entityDeleteButton"
+                      >
+                        <FontAwesomeIcon icon="trash" /> <span className="d-none d-md-inline">Delete</span>
+                      </Button>
                     </div>
                   </td>
                 </tr>

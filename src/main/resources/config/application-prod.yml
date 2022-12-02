@@ -17,7 +17,7 @@ logging:
   level:
     ROOT: INFO
     tech.jhipster: INFO
-    com.haui.onlinestore: INFO
+    com.haui.bookstore: INFO
 
 management:
   metrics:

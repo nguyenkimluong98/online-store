@@ -140,7 +140,7 @@ export const Invoice = (props: RouteComponentProps<{ url: string }>) => {
                   <td>{invoice.paymentMethod}</td>
                   <td>{invoice.paymentDate ? <TextFormat type="date" value={invoice.paymentDate} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{invoice.paymentAmount}</td>
-                  <td>{invoice.order ? <Link to={`/product-order/${invoice.order.id}`}>{invoice.order.id}</Link> : ''}</td>
+                  <td>{invoice.order ? <Link to={`/product-order/${invoice.order.id}`}>{invoice.order.code}</Link> : ''}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/invoice/${invoice.id}`} color="info" size="sm" data-cy="entityDetailsButton">

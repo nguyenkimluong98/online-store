@@ -143,16 +143,17 @@ export const InvoiceUpdate = (props: RouteComponentProps<{ id: string }>) => {
                   validate: v => isNumber(v) || 'This field should be a number.',
                 }}
               />
-              <ValidatedField id="invoice-order" name="order" data-cy="order" label="Order" type="select">
+              <ValidatedField id="invoice-order" name="order" data-cy="order" label="Order" type="select" required>
                 <option value="" key="0" />
                 {productOrders
                   ? productOrders.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.code}
                       </option>
                     ))
                   : null}
               </ValidatedField>
+              <FormText>This field is required.</FormText>
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/invoice" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

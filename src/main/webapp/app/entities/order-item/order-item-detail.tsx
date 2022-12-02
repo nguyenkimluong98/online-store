@@ -39,9 +39,9 @@ export const OrderItemDetail = (props: RouteComponentProps<{ id: string }>) => {
           </dt>
           <dd>{orderItemEntity.status}</dd>
           <dt>Product</dt>
-          <dd>{orderItemEntity.product ? orderItemEntity.product.id : ''}</dd>
+          <dd>{orderItemEntity.product ? orderItemEntity.product.name : ''}</dd>
           <dt>Order</dt>
-          <dd>{orderItemEntity.order ? orderItemEntity.order.id : ''}</dd>
+          <dd>{orderItemEntity.order ? orderItemEntity.order.code : ''}</dd>
         </dl>
         <Button tag={Link} to="/order-item" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>

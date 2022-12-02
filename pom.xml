@@ -5,12 +5,12 @@
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.haui.onlinestore</groupId>
-    <artifactId>online-store</artifactId>
+    <groupId>com.haui.bookstore</groupId>
+    <artifactId>bookstore</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>online-store</name>
-    <description>Description for online-store</description>
+    <name>Bookstore</name>
+    <description>Description for bookstore</description>
 
     <repositories>
         <!-- jhipster-needle-maven-repository -->
@@ -34,7 +34,7 @@
         <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <start-class>com.haui.onlinestore.OnlineStore</start-class>
+        <start-class>com.haui.bookstore.BookstoreApp</start-class>
         <argLine>-Djava.security.egd=file:/dev/./urandom -Xmx512m</argLine>
         <m2e.apt.activation>jdt_apt</m2e.apt.activation>
         <run.addResources>false</run.addResources>
@@ -541,7 +541,7 @@
                             </platforms>
                         </from>
                         <to>
-                            <image>online-store:latest</image>
+                            <image>bookstore:latest</image>
                         </to>
                         <container>
                             <entrypoint>

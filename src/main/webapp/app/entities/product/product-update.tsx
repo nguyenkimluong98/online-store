@@ -126,7 +126,7 @@ export const ProductUpdate = (props: RouteComponentProps<{ id: string }>) => {
                 {productCategories
                   ? productCategories.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.id}
+                        {otherEntity.name}
                       </option>
                     ))
                   : null}

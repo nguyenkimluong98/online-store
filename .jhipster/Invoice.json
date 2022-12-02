@@ -1,5 +1,5 @@
 {
-  "applications": "*",
+  "applications": ["bookstore"],
   "changelogDate": "20221201115531",
   "dto": "no",
   "embedded": false,
@@ -50,10 +50,12 @@
       "relationshipType": "one-to-many"
     },
     {
+      "otherEntityField": "code",
       "otherEntityName": "productOrder",
       "otherEntityRelationshipName": "invoice",
       "relationshipName": "order",
-      "relationshipType": "many-to-one"
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
     }
   ],
   "service": "serviceClass"

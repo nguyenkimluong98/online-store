@@ -2,7 +2,7 @@ import React from 'react';
 
 import MenuItem from 'app/shared/layout/menus/menu-item';
 
-const EntitiesMenu = (props) => {
+const EntitiesMenu = () => {
   return (
     <>
       {/* prettier-ignore */}
@@ -12,9 +12,9 @@ const EntitiesMenu = (props) => {
       <MenuItem icon="asterisk" to="/product-category">
         Product Category
       </MenuItem>
-      {props.isAdmin && (<MenuItem icon="asterisk" to="/customer">
+      <MenuItem icon="asterisk" to="/customer">
         Customer
-      </MenuItem>)}
+      </MenuItem>
       <MenuItem icon="asterisk" to="/product-order">
         Product Order
       </MenuItem>

@@ -13,7 +13,7 @@ export interface IInvoice {
   paymentDate?: string;
   paymentAmount?: number;
   shipments?: IShipment[] | null;
-  order?: IProductOrder | null;
+  order?: IProductOrder;
 }
 
 export const defaultValue: Readonly<IInvoice> = {};

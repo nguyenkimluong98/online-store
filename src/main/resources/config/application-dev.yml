@@ -18,7 +18,7 @@ logging:
     ROOT: DEBUG
     tech.jhipster: DEBUG
     org.hibernate.SQL: DEBUG
-    com.haui.onlinestore: DEBUG
+    com.haui.bookstore: DEBUG
 
 spring:
   devtools:

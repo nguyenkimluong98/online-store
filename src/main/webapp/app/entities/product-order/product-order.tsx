@@ -131,7 +131,7 @@ export const ProductOrder = (props: RouteComponentProps<{ url: string }>) => {
                   <td>{productOrder.status}</td>
                   <td>{productOrder.code}</td>
                   <td>
-                    {productOrder.customer ? <Link to={`/customer/${productOrder.customer.id}`}>{productOrder.customer.id}</Link> : ''}
+                    {productOrder.customer ? <Link to={`/customer/${productOrder.customer.id}`}>{productOrder.customer.email}</Link> : ''}
                   </td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">

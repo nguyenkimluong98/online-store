@@ -39,7 +39,7 @@ export const ShipmentDetail = (props: RouteComponentProps<{ id: string }>) => {
           </dt>
           <dd>{shipmentEntity.details}</dd>
           <dt>Invoice</dt>
-          <dd>{shipmentEntity.invoice ? shipmentEntity.invoice.id : ''}</dd>
+          <dd>{shipmentEntity.invoice ? shipmentEntity.invoice.code : ''}</dd>
         </dl>
         <Button tag={Link} to="/shipment" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>
